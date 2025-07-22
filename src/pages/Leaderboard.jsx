@@ -38,19 +38,19 @@ function Leaderboard() {
   };
 
   return (
-    <div className="min-h-screen bg-[#f5f6f8] py-10 px-4">
+    <div className="min-h-screen bg-[#f5f6f8] py-4 sm:py-10 px-4">
       <div className="max-w-3xl mx-auto">
-        <h1 className="text-4xl font-bold text-center text-emerald-900 mb-8">
+        <h1 className="text-2xl sm:text-4xl font-bold text-center text-emerald-900 mb-4 sm:mb-8">
           Leaderboard
         </h1>
 
         {entries.length === 0 ? (
-          <p className="text-center text-emerald-800 font-bold text-lg">
+          <p className="text-center text-emerald-800 font-bold text-base sm:text-lg">
             No Entries Yet.
           </p>
         ) : (
           <div className="rounded-xl overflow-hidden shadow-md">
-            <div className="grid grid-cols-3 bg-emerald-800 text-white font-semibold py-3 px-4 text-lg">
+            <div className="grid grid-cols-3 bg-emerald-800 text-white font-semibold py-3 px-2 sm:px-4 text-sm sm:text-lg">
               <div>Order</div>
               <div>Name</div>
               <div className="text-right">Score</div>
@@ -58,12 +58,12 @@ function Leaderboard() {
             {entries.map((entry, index) => (
               <div
                 key={entry._id}
-                className={`grid grid-cols-3 items-center py-3 px-4 border-b border-gray-200 ${getRowClasses(
+                className={`grid grid-cols-3 items-center py-2 sm:py-3 px-2 sm:px-4 border-b border-gray-200 text-sm sm:text-base ${getRowClasses(
                   index
                 )}`}
               >
                 <div className="font-bold"># {index + 1}</div>
-                <div className="capitalize font-bold">{entry.username}</div>
+                <div className="capitalize font-bold truncate pr-2">{entry.username}</div>
                 <div className="text-right font-bold">{entry.score}</div>
               </div>
             ))}

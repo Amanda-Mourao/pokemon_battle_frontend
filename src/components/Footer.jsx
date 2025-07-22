@@ -5,7 +5,7 @@ function Footer() {
         <div className="flex space-x-6 text-sm">
           <a
             href="#"
-            className="text-white hover:scale-130 transition-transform duration-500"
+            className="text-white hover:scale-105 transition-transform duration-300"
             style={{
               textShadow: `
             -2px -2px 0 #000,  
@@ -19,7 +19,7 @@ function Footer() {
           </a>
           <a
             href="#"
-            className="text-white hover:scale-130 transition-transform duration-500"
+            className="text-white hover:scale-105 transition-transform duration-300"
             style={{
               textShadow: `
             -2px -2px 0 #000,  
@@ -33,7 +33,7 @@ function Footer() {
           </a>
           <a
             href="#"
-            className="text-white hover:scale-130 transition-transform duration-500"
+            className="text-white hover:scale-105 transition-transform duration-300"
             style={{
               textShadow: `
             -2px -2px 0 #000,  

@@ -78,18 +78,18 @@ function PokemonDetailsPage() {
 
   return (
     <div
-      className={`min-h-screen bg-gradient-to-br ${bgGradient} py-10 relative overflow-hidden`}
+      className={`min-h-screen bg-gradient-to-br ${bgGradient} py-4 sm:py-10 relative overflow-hidden`}
     >
       {/* Glitzer Hintergrund über gesamte Seite */}
       <div className="absolute inset-0 bg-[url('/sparkles.svg')] bg-cover opacity-10 pointer-events-none animate-pulse" />
 
       <div className="container mx-auto px-4 flex flex-col justify-center items-center relative z-10">
-        <h1 className="text-4xl font-bold mb-8 text-center text-white capitalize drop-shadow-lg">
+        <h1 className="text-2xl sm:text-4xl font-bold mb-4 sm:mb-8 text-center text-white capitalize drop-shadow-lg">
           This is {pokemon.name}!
         </h1>
 
         <div
-          className="relative group bg-white text-emerald-900 rounded-xl p-6 shadow-xl transform transition-transform duration-700 hover:rotate-[1deg] hover:scale-105 w-full max-w-md"
+          className="relative group bg-white text-emerald-900 rounded-xl p-4 sm:p-6 shadow-xl transform transition-transform duration-700 hover:rotate-[1deg] hover:scale-105 w-full max-w-sm sm:max-w-md"
           style={{ perspective: "1000px", transformStyle: "preserve-3d" }}
         >
           {/* Shine-Lichtreflex */}
@@ -101,7 +101,7 @@ function PokemonDetailsPage() {
           {/* Inhalt */}
           <div className="relative z-10">
             <div className="flex justify-between items-baseline">
-              <h2 className="text-3xl font-bold capitalize mb-2">
+              <h2 className="text-xl sm:text-3xl font-bold capitalize mb-2">
                 {pokemon.name}
               </h2>
               <button
@@ -110,7 +110,7 @@ function PokemonDetailsPage() {
                     ? handleRemoveFromFavorites()
                     : handleAddToFavorites()
                 }
-                className={`text-4xl transition-colors duration-200 ${
+                className={`text-3xl sm:text-4xl transition-colors duration-200 ${
                   favorite
                     ? "text-yellow-300 hover:text-emerald-900"
                     : "text-emerald-900 hover:text-yellow-300"
@@ -120,35 +120,35 @@ function PokemonDetailsPage() {
               </button>
             </div>
 
-            <div className="flex justify-between items-center flex-wrap gap-2 mt-2">
+            <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center flex-wrap gap-2 mt-2">
               <div>
-                <p className="font-bold capitalize mb-1">
+                <p className="font-bold capitalize mb-1 text-sm sm:text-base">
                   Type:{" "}
                   {pokemon.types
                     .map((typeInfo) => typeInfo.type.name)
                     .join(", ")}
                 </p>
-                <p className="font-bold capitalize mb-2">
+                <p className="font-bold capitalize mb-2 text-sm sm:text-base">
                   Abilities:{" "}
                   {pokemon.abilities
                     .map((abilityInfo) => abilityInfo.ability.name)
                     .join(", ")}
                 </p>
               </div>
-              <p className="font-bold">HP: {pokemon.stats?.[0]?.base_stat}</p>
+              <p className="font-bold text-sm sm:text-base">HP: {pokemon.stats?.[0]?.base_stat}</p>
             </div>
 
             <img
               src={pokemon.sprites?.other.dream_world.front_default}
               alt={pokemon.name}
-              className="w-72 h-72 object-contain mx-auto my-4"
+              className="w-48 h-48 sm:w-72 sm:h-72 object-contain mx-auto my-4"
             />
 
-            <p className="font-bold text-center mt-2 mb-1">
+            <p className="font-bold text-center mt-2 mb-1 text-sm sm:text-base">
               Attack: {pokemon.stats?.[1]?.base_stat} | Defense:{" "}
               {pokemon.stats?.[2]?.base_stat}
             </p>
-            <p className="font-bold text-center">
+            <p className="font-bold text-center text-sm sm:text-base">
               Height: {pokemon.height / 10} m | Weight: {pokemon.weight / 10} kg
             </p>
           </div>
