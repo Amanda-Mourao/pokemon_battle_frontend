@@ -95,10 +95,10 @@ function Home() {
   return (
     <div className="bg-[#f5f6f8] min-h-screen py-4 sm:py-10">
       <div className="container mx-auto px-4">
-        <h1 className="text-2xl sm:text-4xl font-bold mb-4 sm:mb-8 text-center text-emerald-900">
+        <h1 className="text-2xl sm:text-4xl font-bold mb-2 sm:mb-4 text-center text-green-900">
           Pokémon Battle Game
         </h1>
-        <h1 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-8 text-center text-emerald-900">
+        <h1 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-8 text-center text-green-900">
           Choose Your Pokémon!
         </h1>
         {loading ? (
@@ -111,14 +111,14 @@ function Home() {
             className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 sm:gap-4 lg:gap-6"
           >
             {filteredPokemons.length === 0 && (
-              <p className="text-center col-span-full text-emerald-900 font-bold text-base sm:text-lg">
+              <p className="text-center col-span-full text-green-900 font-bold text-base sm:text-lg">
                 No Pokémon Found For "{searchTerm}"!
               </p>
             )}
             {filteredPokemons.map((pokemon) => (
               <div
                 key={pokemon.id}
-                className="bg-white text-emerald-900 rounded-xl shadow p-3 sm:p-4 hover:shadow-lg transition-all duration-300 h-auto"
+                className="bg-white text-green-900 rounded-xl shadow p-3 sm:p-4 hover:shadow-lg transition-all duration-300 h-auto"
               >
                 <div className="flex justify-between items-baseline">
                   <h2 className="text-xl sm:text-3xl font-bold capitalize mb-2">
@@ -132,8 +132,8 @@ function Home() {
                     }
                     className={`text-3xl sm:text-4xl transition-colors duration-200 ${
                       isFavorite(pokemon)
-                        ? "text-yellow-300 hover:text-emerald-900"
-                        : "text-emerald-900 hover:text-yellow-300"
+                        ? "text-yellow-300 hover:text-green-900"
+                        : "text-green-900 hover:text-yellow-300"
                     }`}
                   >
                     {isFavorite(pokemon) ? "★" : "☆"}

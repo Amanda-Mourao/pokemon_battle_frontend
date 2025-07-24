@@ -25,30 +25,14 @@ export default function Navbar() {
   };
 
   return (
-    <div className="h-auto lg:h-36 shadow-lg bg-gradient-to-r from-emerald-900 to-green-800 relative">
-      <nav className="text-white flex flex-col lg:flex-row lg:justify-between font-bold px-4 lg:px-16 py-4 lg:py-0">
+    <div className="h-auto p-2 shadow-lg bg-gradient-to-r from-green-900 to-green-700 relative">
+      <nav className="text-white flex flex-col lg:flex-row lg:justify-between font-bold px-16 lg:px-16 py-4 lg:py-0">
         <div className="flex justify-between items-start lg:justify-start lg:items-start">
-          <div className="flex flex-col items-center justify-start">
-            <img src="/pokemon.webp" className="w-20 lg:w-30 -mt-2" />
-            <img src="/pokeball.webp" className="w-8 lg:w-15 -mt-3" />
-            <h1
-              className="text-sm lg:text-lg font-extrabold text-white tracking-wide whitespace-nowrap mt-1"
-              style={{
-                textShadow: `
-              -2px -2px 0 #000,  
-              2px -2px 0 #000,
-              -2px 2px 0 #000,
-              2px 2px 0 #000
-              `,
-              }}
-            >
-              Battle Game
-            </h1>
-          </div>
+          <img src="/pokemon_logo.png" className="w-25 lg:w-30" />
 
           <button
             onClick={toggleMenu}
-            className="lg:hidden flex flex-col justify-center items-center w-8 h-8 space-y-1 mt-4"
+            className="lg:hidden flex flex-col justify-center items-center w-8 h-15 space-y-1 mt-4"
             aria-label="Toggle menu"
           >
             <span
@@ -70,27 +54,27 @@ export default function Navbar() {
         </div>
 
         {isOnHome && (
-          <div className="hidden lg:block relative top-14">
+          <div className="hidden lg:block relative top-9">
             <input
               type="text"
               placeholder="Search..."
               value={searchParams.get("search") || ""}
               onChange={handleChange}
-              className="w-full md:w-64 px-4 py-2 rounded-xl bg-white text-black border-1 border-black placeholder-green-900/40 focus:outline-none focus:ring-2 focus:ring-black transition-all duration-200"
+              className="w-full md:w-64 px-4 py-2 rounded-xl bg-white text-black font-semibold border-1 border-black placeholder-green-700/50 focus:outline-none focus:ring-2 focus:ring-black transition-all duration-200"
             />
           </div>
         )}
 
-        <div className="hidden lg:flex flex-wrap gap-16 text-lg relative top-16">
+        <div className="hidden lg:flex flex-wrap gap-16 text-lg relative items-center">
           <Link
             to="/"
             className="text-white hover:scale-105 transition-transform duration-300"
             style={{
               textShadow: `
-            -2px -2px 0 #000,  
-            2px -2px 0 #000,
-            -2px 2px 0 #000,
-            2px 2px 0 #000
+            -1px -1px 0 #000,  
+            1px -1px 0 #000,
+            -1px 1px 0 #000,
+            1px 1px 0 #000
             `,
             }}
           >
@@ -101,10 +85,10 @@ export default function Navbar() {
             className="text-white hover:scale-105 transition-transform duration-300"
             style={{
               textShadow: `
-            -2px -2px 0 #000,  
-            2px -2px 0 #000,
-            -2px 2px 0 #000,
-            2px 2px 0 #000
+            -1px -1px 0 #000,  
+            1px -1px 0 #000,
+            -1px 1px 0 #000,
+            1px 1px 0 #000
             `,
             }}
           >
@@ -115,10 +99,10 @@ export default function Navbar() {
             className="text-white hover:scale-105 transition-transform duration-300"
             style={{
               textShadow: `
-            -2px -2px 0 #000,  
-            2px -2px 0 #000,
-            -2px 2px 0 #000,
-            2px 2px 0 #000
+            -1px -1px 0 #000,  
+            1px -1px 0 #000,
+            -1px 1px 0 #000,
+            1px 1px 0 #000
             `,
             }}
           >
@@ -129,10 +113,10 @@ export default function Navbar() {
             className="text-white hover:scale-105 transition-transform duration-300"
             style={{
               textShadow: `
-            -2px -2px 0 #000,  
-            2px -2px 0 #000,
-            -2px 2px 0 #000,
-            2px 2px 0 #000
+            -1px -1px 0 #000,  
+            1px -1px 0 #000,
+            -1px 1px 0 #000,
+            1px 1px 0 #000
             `,
             }}
           >
@@ -142,7 +126,7 @@ export default function Navbar() {
       </nav>
 
       <div
-        className={`lg:hidden absolute top-full left-0 w-full bg-gradient-to-r from-emerald-900 to-green-800 shadow-lg transition-all duration-300 ease-in-out ${
+        className={`lg:hidden absolute top-full left-0 w-full bg-gradient-to-r from-green-900 to-green-700 shadow-lg transition-all duration-300 ease-in-out ${
           isMenuOpen
             ? "opacity-100 transform translate-y-0"
             : "opacity-0 transform -translate-y-4 pointer-events-none"
@@ -156,10 +140,10 @@ export default function Navbar() {
             className="text-white text-lg font-bold hover:scale-105 transition-transform duration-300"
             style={{
               textShadow: `
-            -2px -2px 0 #000,  
-            2px -2px 0 #000,
-            -2px 2px 0 #000,
-            2px 2px 0 #000
+            -1px -1px 0 #000,  
+            1px -1px 0 #000,
+            -1px 1px 0 #000,
+            1px 1px 0 #000
             `,
             }}
           >
@@ -171,11 +155,11 @@ export default function Navbar() {
             className="text-white text-lg font-bold hover:scale-105 transition-transform duration-300"
             style={{
               textShadow: `
-            -2px -2px 0 #000,  
-            2px -2px 0 #000,
-            -2px 2px 0 #000,
-            2px 2px 0 #000
-            `,
+              -1px -1px 0 #000,  
+              1px -1px 0 #000,
+              -1px 1px 0 #000,
+              1px 1px 0 #000
+              `,
             }}
           >
             Battle
@@ -186,10 +170,10 @@ export default function Navbar() {
             className="text-white text-lg font-bold hover:scale-105 transition-transform duration-300"
             style={{
               textShadow: `
-            -2px -2px 0 #000,  
-            2px -2px 0 #000,
-            -2px 2px 0 #000,
-            2px 2px 0 #000
+            -1px -1px 0 #000,  
+            1px -1px 0 #000,
+            -1px 1px 0 #000,
+            1px 1px 0 #000
             `,
             }}
           >
@@ -201,10 +185,10 @@ export default function Navbar() {
             className="text-white text-lg font-bold hover:scale-105 transition-transform duration-300"
             style={{
               textShadow: `
-            -2px -2px 0 #000,  
-            2px -2px 0 #000,
-            -2px 2px 0 #000,
-            2px 2px 0 #000
+            -1px -1px 0 #000,  
+            1px -1px 0 #000,
+            -1px 1px 0 #000,
+            1px 1px 0 #000
             `,
             }}
           >
@@ -218,7 +202,7 @@ export default function Navbar() {
                 placeholder="Search Pokémon..."
                 value={searchParams.get("search") || ""}
                 onChange={handleChange}
-                className="w-full px-4 py-2 rounded-xl bg-white text-black placeholder-green-900/40 focus:outline-none focus:ring-2 focus:ring-black transition-all duration-200"
+                className="w-full px-4 py-2 rounded-xl bg-white text-black font-semibold placeholder-green-700/50 focus:outline-none focus:ring-2 focus:ring-black transition-all duration-200"
               />
             </div>
           )}

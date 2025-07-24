@@ -110,14 +110,14 @@ export default function BattlePage() {
         style={{ minWidth: 140, maxWidth: 180 }}
         title={pokemon.name}
       >
-        <div className="text-sm text-emerald-900 mb-1">{label}</div>
+        <div className="text-sm text-green-900 mb-1">{label}</div>
         <div className="font-bold capitalize mb-1">{pokemon.name}</div>
         <img
           src={pokemon.image}
           alt={pokemon.name}
           className="w-20 h-20 object-contain mb-2"
         />
-        <p className="text-xs text-emerald-900 font-semibold text-center ">
+        <p className="text-xs text-green-900 font-semibold text-center ">
           HP: {pokemon.hp} | ATK: {pokemon.attack} | DEF: {pokemon.defense}
         </p>
       </div>
@@ -125,7 +125,7 @@ export default function BattlePage() {
   }
 
   return (
-    <div className="bg-[#f5f6f8] min-h-screen py-10 text-emerald-900 relative">
+    <div className="bg-[#f5f6f8] min-h-screen py-10 text-green-900 relative">
       {showConfetti && (
         <Confetti
           width={width}
@@ -135,14 +135,16 @@ export default function BattlePage() {
         />
       )}
 
-      <h2 className="text-4xl font-bold mb-8 text-center text-emerald-900">
+      <h2 className="text-4xl font-bold mb-8 text-center text-green-900">
         Pokémon Battle!
       </h2>
 
-      <div className="max-w-6xl mx-auto text-emerald-900 bg-white rounded-xl shadow p-6">
+      <div className="max-w-6xl mx-auto text-green-900 bg-white rounded-xl shadow p-6">
         <div className="flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="flex flex-col items-center flex-1">
-            <h3 className="font-bold mb-2 text-lg text-emerald-900">Choose From Your Roster</h3>
+            <h3 className="font-bold mb-2 text-lg text-green-900">
+              Choose From Your Roster
+            </h3>
             <div className="flex flex-wrap gap-4  justify-center">
               {favorites.map((p) => (
                 <PokemonCard
@@ -173,22 +175,22 @@ export default function BattlePage() {
               {selectedPokemon ? (
                 <PokemonCard pokemon={selectedPokemon} selected label="You" />
               ) : (
-                <div className="rounded-full bg-gray-200 w-24 h-24 flex items-center justify-center mb-2 text-2xl text-emerald-900">
+                <div className="rounded-full bg-gray-200 w-24 h-24 flex items-center justify-center mb-2 text-2xl text-green-900">
                   ?
                 </div>
               )}
-              <div className="mx-4 font-bold text-2xl text-emerald-900">VS</div>
+              <div className="mx-4 font-bold text-2xl text-green-900">VS</div>
               {wildPokemon ? (
                 <PokemonCard pokemon={wildPokemon} label="Computer" />
               ) : (
-                <div className="rounded-full bg-gray-200 w-24 h-24 flex items-center justify-center mb-2 text-2xl text-emerald-900">
+                <div className="rounded-full bg-gray-200 w-24 h-24 flex items-center justify-center mb-2 text-2xl text-green-900">
                   ?
                 </div>
               )}
             </div>
 
             <button
-              className="bg-emerald-900 hover:bg-green-800 text-white font-bold px-6 py-2 rounded shadow transition duration-200"
+              className="bg-green-900 hover:bg-green-700 text-white font-bold px-6 py-2 rounded shadow transition duration-200"
               onClick={startBattle}
               disabled={!selectedPokemon || !wildPokemon}
             >
@@ -196,14 +198,16 @@ export default function BattlePage() {
             </button>
 
             {result && (
-              <div className="mt-4 text-center text-lg font-semibold text-emerald-900">
+              <div className="mt-4 text-center text-lg font-semibold text-green-900">
                 {result}
               </div>
             )}
 
             {result && (
               <div className="mt-4 text-center">
-                <p className="text-sm text-emerald-900 font-semibold mb-2">Score: {score}</p>
+                <p className="text-sm text-green-900 font-semibold mb-2">
+                  Score: {score}
+                </p>
                 {!nameSubmitted ? (
                   <div className="flex flex-col items-center">
                     <input
@@ -211,11 +215,11 @@ export default function BattlePage() {
                       value={username}
                       onChange={(e) => setUsername(e.target.value)}
                       placeholder="Name"
-                      className="border-1 border-green-800 px-4 py-2 rounded text-sm mb-2 focus:outline-none focus:ring-1 focus:ring-green-800"
+                      className="border-1 border-green-800 px-4 py-2 font-semibold rounded text-sm mb-2 focus:outline-none focus:ring-1 focus:ring-green-800"
                     />
 
                     <button
-                      className="bg-emerald-900 hover:bg-green-800 text-white font-bold px-6 py-2 rounded shadow transition duration-200"
+                      className="bg-green-900 hover:bg-green-700 text-white font-bold px-6 py-2 rounded shadow transition duration-200"
                       onClick={submitScore}
                       disabled={!username.trim()}
                     >
@@ -223,14 +227,16 @@ export default function BattlePage() {
                     </button>
                   </div>
                 ) : (
-                  <p className="bg-emerald-900 hover:bg-green-800 text-white font-bold px-6 py-2 rounded shadow transition duration-200">Score saved</p>
+                  <p className="bg-green-900 hover:bg-green-700 text-white font-bold px-6 py-2 rounded shadow transition duration-200">
+                    Score saved
+                  </p>
                 )}
               </div>
             )}
 
             {result && (
               <button
-                className="bg-emerald-900 hover:bg-green-800 text-white font-bold p-2 mt-3 rounded shadow transition duration-200"
+                className="bg-green-900 hover:bg-green-700 text-white font-bold p-2 mt-3 rounded shadow transition duration-200"
                 onClick={resetGame}
               >
                 New Battle
@@ -239,15 +245,17 @@ export default function BattlePage() {
           </div>
 
           <div className="flex flex-col items-center flex-1">
-            <h3 className="font-bold mb-2 text-lg text-emerald-900">Computer</h3>
+            <h3 className="font-bold mb-2 text-lg text-green-900">Computer</h3>
             {wildPokemon ? (
               <PokemonCard pokemon={wildPokemon} label="Opponent" />
             ) : (
-              <p className="text-emerald-900 font-semibold">Loading Opponent...</p>
+              <p className="text-green-900 font-semibold">
+                Loading Opponent...
+              </p>
             )}
             <button
               onClick={generateWildPokemon}
-              className="bg-emerald-900 hover:bg-green-800 text-white font-bold p-2 mt-3 rounded shadow transition duration-200"
+              className="bg-green-900 hover:bg-green-700 text-white font-bold p-2 mt-3 rounded shadow transition duration-200"
             >
               Get New Opponent
             </button>

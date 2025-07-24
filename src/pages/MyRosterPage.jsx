@@ -64,7 +64,7 @@ const MyRoasterPage = () => {
       )}
 
       <div className="container mx-auto px-4">
-        <h1 className="text-2xl sm:text-4xl font-bold mb-4 sm:mb-8 text-center text-emerald-900">
+        <h1 className="text-2xl sm:text-4xl font-bold mb-4 sm:mb-8 text-center text-green-900">
           My Roaster!
         </h1>
 
@@ -72,7 +72,7 @@ const MyRoasterPage = () => {
           <div className="flex justify-center sm:justify-end mb-4 sm:mb-6">
             <button
               onClick={handleClearAllFavorites}
-              className="bg-emerald-900 hover:bg-green-800 text-white font-bold px-4 sm:px-6 py-2 mb-4 rounded shadow transition duration-200 text-sm sm:text-base"
+              className="bg-green-900 hover:bg-green-700 text-white font-bold px-4 sm:px-6 py-2 mb-4 rounded shadow transition duration-200 text-sm sm:text-base"
             >
               Remove All Favorites
             </button>
@@ -80,7 +80,7 @@ const MyRoasterPage = () => {
         )}
 
         {favorites.length === 0 ? (
-          <p className="text-emerald-900 font-bold text-base sm:text-lg text-center">
+          <p className="text-green-900 font-bold text-base sm:text-lg text-center">
             No Favorites Yet!
           </p>
         ) : (
@@ -88,7 +88,7 @@ const MyRoasterPage = () => {
             {favorites.map((fav) => (
               <div
                 key={fav.id}
-                className="relative group bg-white text-emerald-900 rounded-xl p-3 sm:p-4 h-auto overflow-hidden transition-all duration-500 transform hover:-translate-y-2 hover:scale-[1.02] shadow-md hover:shadow-2xl ring-1 ring-emerald-200 hover:ring-4 hover:ring-emerald-400"
+                className="relative group bg-white text-green-900 rounded-xl p-3 sm:p-4 h-auto overflow-hidden transition-all duration-500 transform hover:-translate-y-2 hover:scale-[1.02] shadow-md hover:shadow-2xl ring-1 ring-emerald-200 hover:ring-4 hover:ring-emerald-400"
               >
                 <div className="absolute inset-0 z-0 pointer-events-none before:absolute before:inset-0 before:bg-gradient-to-r before:from-transparent before:via-white/30 before:to-transparent before:rotate-12 before:animate-glow" />
                 <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-emerald-100 via-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-0" />
@@ -99,7 +99,7 @@ const MyRoasterPage = () => {
                   </h2>
                   <button
                     onClick={() => handleRemoveFromFavorites(fav.id)}
-                    className="text-3xl sm:text-4xl text-yellow-300 hover:text-emerald-900 transition-colors duration-200"
+                    className="text-3xl sm:text-4xl text-yellow-300 hover:text-green-900 transition-colors duration-200"
                   >
                     ★
                   </button>

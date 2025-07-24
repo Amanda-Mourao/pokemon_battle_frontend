@@ -1,6 +1,6 @@
 function Footer() {
   return (
-    <footer className="bg-gradient-to-r from-emerald-900 to-green-800 text-white py-6 px-4">
+    <footer className="bg-gradient-to-r from-green-900 to-green-700 text-white py-6 px-4">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
         <div className="flex space-x-6 text-sm">
           <a
@@ -8,11 +8,11 @@ function Footer() {
             className="text-white hover:scale-105 transition-transform duration-300"
             style={{
               textShadow: `
-            -2px -2px 0 #000,  
-            2px -2px 0 #000,
-            -2px 2px 0 #000,
-            2px 2px 0 #000
-            `,
+              -1px -1px 0 #000,  
+              1px -1px 0 #000,
+              -1px 1px 0 #000,
+              1px 1px 0 #000
+              `,
             }}
           >
             Legal Notice
@@ -22,11 +22,11 @@ function Footer() {
             className="text-white hover:scale-105 transition-transform duration-300"
             style={{
               textShadow: `
-            -2px -2px 0 #000,  
-            2px -2px 0 #000,
-            -2px 2px 0 #000,
-            2px 2px 0 #000
-            `,
+              -1px -1px 0 #000,  
+              1px -1px 0 #000,
+              -1px 1px 0 #000,
+              1px 1px 0 #000
+              `,
             }}
           >
             Privacy Policy
@@ -36,11 +36,11 @@ function Footer() {
             className="text-white hover:scale-105 transition-transform duration-300"
             style={{
               textShadow: `
-            -2px -2px 0 #000,  
-            2px -2px 0 #000,
-            -2px 2px 0 #000,
-            2px 2px 0 #000
-            `,
+              -1px -1px 0 #000,  
+              1px -1px 0 #000,
+              -1px 1px 0 #000,
+              1px 1px 0 #000
+              `,
             }}
           >
             Contact
@@ -51,10 +51,10 @@ function Footer() {
           className="text-xs text-white text-center md:text-right"
           style={{
             textShadow: `
-            -2px -2px 0 #000,  
-            2px -2px 0 #000,
-            -2px 2px 0 #000,
-            2px 2px 0 #000
+            -1px -1px 0 #000,  
+            1px -1px 0 #000,
+            -1px 1px 0 #000,
+            1px 1px 0 #000
             `,
           }}
         >

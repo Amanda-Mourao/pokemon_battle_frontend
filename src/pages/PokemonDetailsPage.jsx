@@ -89,7 +89,7 @@ function PokemonDetailsPage() {
         </h1>
 
         <div
-          className="relative group bg-white text-emerald-900 rounded-xl p-4 sm:p-6 shadow-xl transform transition-transform duration-700 hover:rotate-[1deg] hover:scale-105 w-full max-w-sm sm:max-w-md"
+          className="relative group bg-white text-green-900 rounded-xl p-4 sm:p-6 shadow-xl transform transition-transform duration-700 hover:rotate-[1deg] hover:scale-105 w-full max-w-sm sm:max-w-md"
           style={{ perspective: "1000px", transformStyle: "preserve-3d" }}
         >
           {/* Shine-Lichtreflex */}
@@ -112,8 +112,8 @@ function PokemonDetailsPage() {
                 }
                 className={`text-3xl sm:text-4xl transition-colors duration-200 ${
                   favorite
-                    ? "text-yellow-300 hover:text-emerald-900"
-                    : "text-emerald-900 hover:text-yellow-300"
+                    ? "text-yellow-300 hover:text-green-900"
+                    : "text-green-900 hover:text-yellow-300"
                 }`}
               >
                 {favorite ? "★" : "☆"}
@@ -135,7 +135,9 @@ function PokemonDetailsPage() {
                     .join(", ")}
                 </p>
               </div>
-              <p className="font-bold text-sm sm:text-base">HP: {pokemon.stats?.[0]?.base_stat}</p>
+              <p className="font-bold text-sm sm:text-base">
+                HP: {pokemon.stats?.[0]?.base_stat}
+              </p>
             </div>
 
             <img
